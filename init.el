@@ -5,10 +5,10 @@
 
 (require 'init-const)
 (require 'init-startup)
+(require 'init-kbd)
 (require 'init-elpa)
 (require 'init-package)
 (require 'init-ui)
-
 
 (when (file-exists-p custom-file)
   (load-file custom-file))

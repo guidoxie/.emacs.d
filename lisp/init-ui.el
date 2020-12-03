@@ -19,5 +19,8 @@
 			    charset (font-spec :family "Microsoft Yahei Mono" :size 12))))
     (set-face-attribute 'default nil :font "Source Code Pro for Powerline 11")))
 
+(setq display-line-numbers-type t)
+(global-display-line-numbers-mode t)
+
 
 (provide 'init-ui)
