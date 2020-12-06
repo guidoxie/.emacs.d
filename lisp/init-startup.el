@@ -29,4 +29,5 @@
 
 (setq inhibit-startup-screen t)
 (setq make-backup-files nil)
+
 (provide 'init-startup)

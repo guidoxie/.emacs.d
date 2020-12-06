@@ -1,3 +1,4 @@
+;;(toggle-frame-fullscreen)
 (add-to-list 'load-path
 	     (expand-file-name (concat user-emacs-directory "lisp")))
 

@@ -66,5 +66,22 @@
 (use-package flycheck
   :hook (after-init . global-flycheck-mode))
 
+;; (use-package which-key
+;;  :defer nil
+;;  :config (which-key-mode))
+
+(use-package ivy-posframe
+  :init
+  (setq ivy-posframe-display-functions-alist
+	'((swiper . ivy-posframe-display-at-frame-center)
+	  (complate-symbol . ivy-posframe-display-at-point)
+	  (counsel-M-x . ivy-posframe-display-at-frame-center)
+	  (counsel-find-file . ivy-posframe-display-at-frame-center)
+	  (ivy-switch-buffer . ivy-posframe-display-at-frame-center)
+	  (t . ivy-posframe-display-at-frame-center))))
+(ivy-posframe-mode 1)
+
+(use-package ace-window
+  :bind (("M-o" . 'ace-window)))
 
 (provide 'init-package)
