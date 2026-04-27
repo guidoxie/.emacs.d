@@ -96,5 +96,16 @@
   (("C-a" . mwim-beginning-of-code-or-line)
    ("C-e" . mwim-end-of-code-or-line)))
 
+;; ==========================================
+;; 开启全局自动热重载 (打通外部 AI 与终端)
+;; ==========================================
+(use-package autorevert
+  :straight nil   ; 声明这是 Emacs 内置模块，不需要去网盘拉取源码
+  :hook (after-init . global-auto-revert-mode)
+  :custom
+  ;; 【核心细节】不仅仅刷新代码文件，也让 Dired 目录树、Magit 状态面板自动刷新
+  (global-auto-revert-non-file-buffers t)
+  ;; 静默刷新：当 AI 改了代码时，默默在后台更新，不要在底部弹消息烦人
+  (auto-revert-verbose nil))
 
 (provide 'init-startup)
