@@ -2,6 +2,8 @@
 
 一个现代化的 Emacs 配置，专注于 Go 和 Python 开发，针对 macOS 和终端使用进行了优化。
 
+![emacs](img/emacs.png)
+
 ## 特性
 
 - **LSP 开发体验** — 基于 Eglot，支持 Go (gopls) 和 Python (pyright)
