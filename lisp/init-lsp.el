@@ -55,6 +55,12 @@
     (add-hook 'before-save-hook #'eglot-format-buffer -1 t))
   (add-hook 'python-mode-hook #'python-format-on-save))
 
+;; Markdown 语法高亮
+(use-package markdown-mode
+  :mode ("\\.md\\'" . markdown-mode)
+  :custom
+  (markdown-command "multimarkdown"))
+
 ;; 环境管理，完美解决 Python 虚拟环境识别问题
 (use-package envrc
   :init
