@@ -44,15 +44,25 @@
 
 ## 终端设置
 
-使用 Ghostty 终端时，需要开启 Option 键作为 Meta 键：
-
-编辑 Ghostty 配置文件（通常在 `~/.config/ghostty/config`），添加：
+使用 [Ghostty](https://ghostty.org/) 终端，配置如下：
 
 ```
+quick-terminal-position = top
+quick-terminal-screen = mouse
+quick-terminal-autohide = true
+quick-terminal-animation-duration = 0.15
+
+keybind = global:ctrl+grave_accent=toggle_quick_terminal
+
+clipboard-paste-protection = true
+clipboard-paste-bracketed-safe = true
+
 macos-option-as-alt = left
+
+custom-shader = ~/.emacs.d/shaders/cursor_smear_rainbow_original.glsl
 ```
 
-这样 `M-x`、`M-f` 等 Meta 组合键才能正常工作。
+其中 `macos-option-as-alt = left` 确保 `M-x`、`M-f` 等 Meta 组合键正常工作，`custom-shader` 启用光标彩虹拖尾效果。
 
 ## 依赖安装
 
