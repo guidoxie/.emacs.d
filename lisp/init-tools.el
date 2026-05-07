@@ -41,6 +41,19 @@
    ("M-s f" . consult-find)))       ;; 跨文件找文件名 (依赖系统安装了 fd 或 find)
 
 
+;; 在文件左侧显示 Git 行级变动 (类似 VS Code 的绿条/蓝条)
+(use-package diff-hl
+  :straight t
+  :hook
+  ((prog-mode . diff-hl-mode)       ;; 在所有编程语言中开启
+   (dired-mode . diff-hl-dired-mode)) ;; 在目录浏览器中也高亮变动文件
+  :config
+  (global-diff-hl-mode +1)
+  
+  ;; 关键配置：因为在用终端 (Ghostty)
+  ;; 终端没有图形界面那种 "Fringe(边缘)"，所以必须开启 margin 模式才能显示颜色条
+  (unless (display-graphic-p)
+    (diff-hl-margin-mode +1)))
 
 (provide 'init-tools)
 
