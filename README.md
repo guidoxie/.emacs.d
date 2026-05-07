@@ -62,6 +62,8 @@ macos-option-as-alt = left
 custom-shader = ~/.emacs.d/shaders/cursor_smear_rainbow_original.glsl
 ```
 
+Shaders 来源：[ghostty-shader-playground](https://github.com/KroneCorylus/ghostty-shader-playground)
+
 其中 `macos-option-as-alt = left` 确保 `M-x`、`M-f` 等 Meta 组合键正常工作，`custom-shader` 启用光标彩虹拖尾效果。
 
 ## 依赖安装
